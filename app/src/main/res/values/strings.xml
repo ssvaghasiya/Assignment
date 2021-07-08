@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">Demoapp</string>
+
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyByfYMVJuAn3qqlVyWPCpGsS1OezFTI8N4</string>
+    <string name="connection_title">No internet connection</string>
+    <string name="connection_not_available">It seems that you are not connected to the Internet. Kindly check your network settings.</string>
+    <string name="btn_ok">OK</string>
+    <string name="hint_email_signup">Email</string>
+    <string name="forgot_PIN">Forgot PIN?</string>
+    <string name="or"><b><u>OR</u></b></string>
+    <string name="st_signup">SIGN UP</string>
+    <string name="st_sign_in_reg">SignIn</string>
+    <string name="default_notification_channel_id">Somerce</string>
+
+    <string name="logout_msg">Are you sure want to logout?</string>
+    <string name="btn_yes">Yes</string>
+    <string name="btn_no">No</string>
+    <string name="menu">Menu</string>
+    <!-- Buttons strings -->
+
+    <!-- Error strings -->
+
+    <!-- Transition type strings -->
+
+    <string name="clear">Clear</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_orders">Orders</string>
+    <string name="nav_delivery">Delivery</string>
+    <string name="nav_profile">Profile</string>
+
+    <string name="permission_setting">Permission Setting</string>
+    <string name="settings">Settings</string>
+    <string name="setting">Setting</string>
+    <string name="back">Back</string>
+    <string name="retry">Retry</string>
+    <string name="need_permission_title">Need permission(s)</string>
+    <string name="err_need_permission_msg">You have previously declined this permission.\nYou must approve this permission in \"Permissions\" in the app settings on your device.</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="msg_session_time_out">Session Time Out</string>
+    <string name="err_pass">Enter Valid Password</string>
+    <string name="err_pass_min">Min character of password must be 7</string>
+    <string name="welcome">Welcome,</string>
+    <string name="choose_gallery">Pick From Gallery</string>
+    <string name="choose_camera">Take From Camera</string>
+    <string name="cancel">Cancel</string>
+    <string name="continue_">Continue</string>
+    <string name="showcase">Showcase</string>
+    <string name="sign_in_with_an_email_link"><u>Sign in with an email link</u></string>
+    <string name="sign_in_with_an_password_link"><u>Sign in with password</u></string>
+    <string name="set_your_pin">Set your PIN</string>
+    <string name="confirm_your_pin">Confirm your PIN</string>
+    <string name="back_to_sigin_screen">Back to sign in screen</string>
+
+    <string name="code_right">Right</string>
+    <string name="code_wrong">Wrong</string>
+    <string name="incorrect_email_address_or_password">Incorrect email address or password.  Please try again.</string>
+    <string name="incorrect_email_address">Incorrect or invalid email address. Please try again.</string>
+    <string name="incorrect_pin">Your PIN does not match. Please create a new one.</string>
+    <string name="incorrect_pin_match">You\'ve entered the wrong PIN.Please try again</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="forgot">Forgot?</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="new_password_toast">Your password needs to be 15 characters.</string>
+    <string name="password_not_match">Your password does not match. Please try again.</string>
+    <string name="edit">Edit</string>
+    <string name="exit_msg">Press Back twice to exit</string>
+    <string name="forgot_my_pin">Forgot my PIN</string>
+    <string name="wrong_entered_pin_validation">You\'ve entered the wrong PIN. Please try again.</string>
+    <string name="enter_your_pin">Enter your PIN</string>
+    <string name="minimum_15_character_password">Minimum 15 character password</string>
+    <string name="re_enter_the_same_password">Re-enter the same password</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="err_select_image">Select Image</string>
+    <string name="profile">profile</string>
+    <string name="empty_field">empty field</string>
+    <string name="profile_pic_error">Profile Picture required</string>
+    <string name="address_error">Address required</string>
+    <string name="security_answer_error">Security Answer required</string>
+    <string name="security_que_error">Select Security Question required</string>
+    <string name="dob_error">DOB required</string>
+    <string name="confirmpswd_error">confirm Password required</string>
+    <string name="password_error">Password required</string>
+    <string name="username_error">Username required</string>
+    <string name="email_error">Email is empty or invalid</string>
+    <string name="last_name_error">Last name required</string>
+    <string name="first_name_error">First name required</string>
+
+
+</resources>

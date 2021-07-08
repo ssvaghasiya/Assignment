@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewClickHandler"
+            type="com.demoapp.ui.profile.viewmodel.ProfileViewModel.ViewClickHandler" />
+
+        <variable
+            name="viewModel"
+            type="com.demoapp.ui.profile.viewmodel.ProfileViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_10sdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfilePic"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:src="@color/gray_close"
+                android:visibility="visible" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/gray_light__"
+                    android:paddingHorizontal="@dimen/_6sdp"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:orientation="vertical">
+
+                    <com.demoapp.custom.CTextViewSB
+                        style="@style/txt_semi_light_gray_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="First Name" />
+
+                    <com.demoapp.custom.CTextViewSB
+                        android:id="@+id/tvFname"
+                        style="@style/txt_000_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:paddingVertical="@dimen/_3sdp"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:background="@color/gray_light__"
+                    android:paddingHorizontal="@dimen/_6sdp"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:orientation="vertical">
+
+                    <com.demoapp.custom.CTextViewSB
+                        style="@style/txt_semi_light_gray_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Name" />
+
+                    <com.demoapp.custom.CTextViewSB
+                        android:id="@+id/tvLname"
+                        style="@style/txt_000_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:paddingVertical="@dimen/_3sdp"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@color/gray_light__"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_4sdp"
+                android:orientation="vertical">
+
+                <com.demoapp.custom.CTextViewSB
+                    style="@style/txt_semi_light_gray_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email_address" />
+
+                <com.demoapp.custom.CTextViewSB
+                    android:id="@+id/tvEmail"
+                    style="@style/txt_000_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@color/gray_light__"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_4sdp"
+                android:orientation="vertical">
+
+                <com.demoapp.custom.CTextViewSB
+                    style="@style/txt_semi_light_gray_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Username" />
+
+                <com.demoapp.custom.CTextViewSB
+                    android:id="@+id/tvUsername"
+                    style="@style/txt_000_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@color/gray_light__"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_4sdp"
+                android:orientation="vertical">
+
+                <com.demoapp.custom.CTextViewSB
+                    style="@style/txt_semi_light_gray_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date of birth" />
+
+
+                <com.demoapp.custom.CTextViewSB
+                    android:id="@+id/tvBdate"
+                    style="@style/txt_000_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@color/gray_light__"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_4sdp"
+                android:orientation="vertical">
+
+                <com.demoapp.custom.CTextViewSB
+                    style="@style/txt_semi_light_gray_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address" />
+
+                <com.demoapp.custom.CTextViewSB
+                    android:id="@+id/tvAddress"
+                    style="@style/txt_000_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+
+            <com.demoapp.custom.CButtonView
+                android:id="@+id/button3"
+                style="@style/txt_000_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:onClick="@{(v)->viewClickHandler.onLogout(v)}"
+                android:text="Logout"
+                android:textAllCaps="false" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

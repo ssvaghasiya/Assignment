@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewClickHandler"
+            type="com.demoapp.ui.signup.viewmodel.SignupViewModel.ViewClickHandler" />
+
+        <variable
+            name="viewModel"
+            type="com.demoapp.ui.signup.viewmodel.SignupViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_10sdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfilePic"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:onClick="@{(v)->viewClickHandler.onProfilePic(v)}"
+                android:src="@color/gray_close"
+                android:visibility="visible" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.demoapp.custom.CTextViewSB
+                        style="@style/txt_semi_light_gray_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:text="First Name" />
+
+                    <com.demoapp.custom.CEditTextView
+                        android:id="@+id/edtFname"
+                        style="@style/txt_000_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="John"
+                        android:imeOptions="actionNext"
+                        android:paddingVertical="@dimen/_3sdp"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.demoapp.custom.CTextViewSB
+                        style="@style/txt_semi_light_gray_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:text="Last Name" />
+
+                    <com.demoapp.custom.CEditTextView
+                        android:id="@+id/edtLname"
+                        style="@style/txt_000_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Wilson"
+                        android:imeOptions="actionNext"
+                        android:paddingVertical="@dimen/_3sdp"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="vertical">
+
+                <com.demoapp.custom.CTextViewSB
+                    style="@style/txt_semi_light_gray_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:text="@string/email_address" />
+
+                <com.demoapp.custom.CEditTextView
+                    android:id="@+id/edtEmail"
+                    style="@style/txt_000_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="johnwilson30@gmail.com"
+                    android:imeOptions="actionNext"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="vertical">
+
+                <com.demoapp.custom.CTextViewSB
+                    style="@style/txt_semi_light_gray_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:text="Username" />
+
+                <com.demoapp.custom.CEditTextView
+                    android:id="@+id/edtUsername"
+                    style="@style/txt_000_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter UserName"
+                    android:imeOptions="actionNext"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="vertical">
+
+                <com.demoapp.custom.CTextViewSB
+                    style="@style/txt_semi_light_gray_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:text="@string/password" />
+
+                <com.demoapp.custom.CEditTextView
+                    android:id="@+id/edtPassword"
+                    style="@style/txt_000_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="******"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="vertical">
+
+                <com.demoapp.custom.CTextViewSB
+                    style="@style/txt_semi_light_gray_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:text="@string/confirm_password" />
+
+                <com.demoapp.custom.CEditTextView
+                    android:id="@+id/edtConfirmPswd"
+                    style="@style/txt_000_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="******"
+                    android:imeOptions="actionGo"
+                    android:inputType="textPassword"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="vertical">
+
+                <com.demoapp.custom.CTextViewSB
+                    style="@style/txt_semi_light_gray_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:text="Date of birth" />
+
+
+                <com.demoapp.custom.CTextView
+                    android:id="@+id/tvBdate"
+                    style="@style/txt_000_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawableEnd="@drawable/ic_baseline_calendar_today_24"
+                    android:hint="YYYY-MM-DD"
+                    android:onClick="@{(v)->viewClickHandler.onDatePicker(v)}"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="vertical">
+
+                <com.demoapp.custom.CTextViewSB
+                    style="@style/txt_semi_light_gray_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:text="Security answer" />
+
+                <com.demoapp.custom.CEditTextView
+                    android:id="@+id/edtSecAns"
+                    style="@style/txt_000_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:imeOptions="actionNext"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="vertical">
+
+                <com.demoapp.custom.CTextViewSB
+                    style="@style/txt_semi_light_gray_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:text="Address" />
+
+                <com.demoapp.custom.CEditTextView
+                    android:id="@+id/edtAddress"
+                    style="@style/txt_000_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:imeOptions="actionNext"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+
+            <com.demoapp.custom.CButtonView
+                android:id="@+id/button3"
+                style="@style/txt_000_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:onClick="@{(v)->viewClickHandler.onSignup(v)}"
+                android:text="Create Account"
+                android:textAllCaps="false" />
+
+            <com.demoapp.custom.CTextViewSB
+                style="@style/txt_semi_light_gray_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_32sdp"
+                android:includeFontPadding="false"
+                android:onClick="@{(v)->viewClickHandler.onLogin(v)}"
+                android:text="Already have an account? Login"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

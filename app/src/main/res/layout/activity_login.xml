@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewClickHandler"
+            type="com.demoapp.ui.login.viewmodel.LoginViewModel.ViewClickHandler" />
+
+        <variable
+            name="viewModel"
+            type="com.demoapp.ui.login.viewmodel.LoginViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/llParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_20sdp"
+        tools:context=".ui.login.view.LoginActivity">
+
+
+        <com.demoapp.custom.CTextViewSB
+            android:id="@+id/tvEmail"
+            style="@style/txt_semi_light_gray_12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:includeFontPadding="false"
+            android:text="@string/email_address" />
+
+
+        <com.demoapp.custom.CEditTextView
+            android:id="@+id/edtEmail"
+            style="@style/txt_000_12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingVertical="@dimen/_4sdp"
+            android:hint="Enter Your Email"
+            android:singleLine="true" />
+
+
+        <com.demoapp.custom.CTextViewSB
+            android:id="@+id/tvPassword"
+            style="@style/txt_semi_light_gray_12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:includeFontPadding="false"
+            android:text="@string/password" />
+
+
+        <com.demoapp.custom.CEditTextView
+            android:id="@+id/edtPassword"
+            style="@style/txt_000_12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:hint="@string/enter_your_password"
+            android:inputType="textPassword"
+            android:paddingVertical="@dimen/_4sdp"
+            android:singleLine="true" />
+
+        <com.demoapp.custom.CButtonView
+            android:id="@+id/button5"
+            style="@style/txt_000_12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:onClick="@{(v)->viewClickHandler.onSignin(v)}"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:singleLine="true"
+            android:text="Login" />
+
+
+        <com.demoapp.custom.CTextViewSB
+            android:id="@+id/tvEmailLink"
+            style="@style/txt_blue1_12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:gravity="center"
+            android:onClick="@{(v)->viewClickHandler.onSignup(v)}"
+            android:text="Create New Account" />
+
+
+    </LinearLayout>
+
+
+</layout>
