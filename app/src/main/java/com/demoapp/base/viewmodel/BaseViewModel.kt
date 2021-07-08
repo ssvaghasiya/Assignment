@@ -474,14 +474,28 @@ open class BaseViewModel(application: Application) : AppViewModel(application) {
             val stream = ByteArrayOutputStream()
             bitmap.compress(Bitmap.CompressFormat.JPEG, 70, stream)
             var blob = stream.toByteArray()
-            return blob
+            return imageCompress(blob)
         } catch (e: java.lang.Exception) {
             // TODO: handle exception
             Debug.e("error", e.toString())
         }
         return null
     }
-//    https://stackoverflow.com/questions/28448923/how-to-convert-camera-uri-to-blob-object-in-phonegap
+
+    fun imageCompress(imagem_img: ByteArray): ByteArray? {
+        var imagem_img = imagem_img
+        while (imagem_img.size > 500000) {
+            val bitmap = BitmapFactory.decodeByteArray(imagem_img, 0, imagem_img.size)
+            val resized = Bitmap.createScaledBitmap(
+                bitmap,
+                (bitmap.width * 0.8).toInt(), (bitmap.height * 0.8).toInt(), true
+            )
+            val stream = ByteArrayOutputStream()
+            resized.compress(Bitmap.CompressFormat.PNG, 100, stream)
+            imagem_img = stream.toByteArray()
+        }
+        return imagem_img
+    }
 
     fun getImageFromBLOB(mBlob: ByteArray): Bitmap? {
         return BitmapFactory.decodeByteArray(mBlob, 0, mBlob.size)
